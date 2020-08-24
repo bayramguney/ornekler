@@ -1,19 +1,22 @@
 package serdar;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class deneme {
     public static void main(String[] args) {
-        String str = "AAABBBCCC";
-        String nonDub="";
-        for (int i = 0; i <str.length() ; i++) {
-            if(!nonDub.contains(str.substring(i,i+1))){
-                nonDub+=str.substring(i,i+1);
+        int[] arr = {10, 9, 8, 7};
+        for (int i = 0; i <arr.length ; i++) {
+            for (int j = i+1; j <arr.length ; j++) {
+                if (arr[i] > arr[j]) {
+                    int temp=arr[j];
+                    arr[j]=arr[i];
+                    arr[i]=temp;
+
+                }
+
             }
+
         }
-        System.out.println(nonDub);
+        System.out.println(Arrays.toString(arr));
     }
 }
