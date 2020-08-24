@@ -1,13 +1,22 @@
 package serdar;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class deneme {
     public static void main(String[] args) {
+        /*
+18. Given a list of people' names: "Ahmed", "John", Eric",
+"Ahmed".....
+Write a java operation to remove all the names named Ahmed
+*/
 
-        int number=343563;
-        System.out.println(number%2==0?"cift":"tek");
+        ArrayList<String>list=new ArrayList<>(Arrays.asList("Ahmed", "John", "Eric", "Ahmed"));
+ArrayList<String> names=new ArrayList<>();
+
+        for (String each:list
+             ) {
+            if(!each.equals("Ahmed"))
+                names.add(each);
+        }
+        System.out.println(names);
 }}
