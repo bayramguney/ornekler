@@ -7,7 +7,30 @@ import java.util.List;
 
 public class deneme {
     public static void main(String[] args) {
+        String password = "123abc#$%A";
+        System.out.println(isValid(password));
+    }
 
-        int number=343563;
-        System.out.println(number%2==0?"cift":"tek");
-}}
+    public static boolean isValid(String password) {
+
+        String uppercase=".*[A-Z].*";
+        String lowercase=".*[a-z].*";
+        String number=".*[0-9].*";
+        String special=".*[ -/, :-@].*";
+
+        boolean hasUpper=password.matches(uppercase),
+                hasLower=password.matches(lowercase),
+                hasNumber=password.matches(number),
+                hasSpecial=password.matches(special),
+        isValid=false;
+        if(password.length()>=6 && !password.contains(" ")){
+            if(hasLower && hasNumber && hasUpper && hasSpecial)
+            isValid=true;
+        }
+
+
+
+
+    return isValid;
+    }
+}
